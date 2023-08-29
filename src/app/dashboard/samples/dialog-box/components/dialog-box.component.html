@@ -1,0 +1,16 @@
+<h1 mat-dialog-title><strong>{{LABEL[obj.action]}} {{obj.type}}</strong></h1>
+<div mat-dialog-content>
+  <mat-form-field *ngIf="obj.action !== 'delete'; else elseTemplate" class="form-field">
+    <input placeholder="Nome" matInput [(ngModel)]="formData.name">
+  </mat-form-field>
+  <mat-form-field *ngIf="obj.action !== 'delete' && obj.type==='sample'" class="form-field">
+    <input placeholder="Descrizione" matInput [(ngModel)]="formData.description">
+  </mat-form-field>
+  <ng-template #elseTemplate>
+    Sicuro di cancellare <b>{{formData.name}}</b>?
+  </ng-template>
+</div>
+<div mat-dialog-actions>
+  <button [disabled]="!formData.name" mat-button (click)="doAction()">{{LABEL[obj.action]}}</button>
+  <button mat-button (click)="closeDialog()" mat-flat-button color="warn">Chiudi</button>
+</div>

@@ -1,0 +1,18 @@
+.welcome-user{
+    right: 0;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.title-container{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .green{
+        color:greenyellow;
+    }
+}

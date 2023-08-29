@@ -1,0 +1,14 @@
+<div class="card-container">
+    <mat-card *ngFor="let menu of menuList" class="item-card" (click)="goTo(menu.route)">
+        <mat-card-header>
+            <mat-card-subtitle>{{menu.subtitle}}</mat-card-subtitle>
+            <mat-card-title>{{menu.title}}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <mat-divider></mat-divider>
+        </mat-card-content>
+        <div class="item-icon">
+            <img src="https://cdn-icons-png.flaticon.com/512/4136/4136041.png">
+        </div>
+    </mat-card>
+</div>

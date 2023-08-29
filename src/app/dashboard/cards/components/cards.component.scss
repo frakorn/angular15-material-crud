@@ -1,0 +1,29 @@
+
+.item-card{
+    width:fit-content;
+    margin: 10px;
+}
+
+.item-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    img{
+        height: 45px;
+    }
+}
+
+.item-card{
+    cursor: pointer;
+    &:hover{
+        opacity: 0.7;
+    }
+}
+
+.card-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}

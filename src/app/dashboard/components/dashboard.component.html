@@ -1,0 +1,14 @@
+<mat-toolbar color="primary">
+    <div class="title-container">
+        <span (click)="goToHome()">HUB App</span>
+        <span class="material-icons green">biotech</span>
+    </div>
+    <span class="spacer"></span>
+    <span class="welcome-user">Benvenuto {{user.firstName}} {{user.lastName}} 
+        <button mat-icon-button class="logout-icon" (click)="logout()">
+            <mat-icon>logout</mat-icon>
+        </button>
+    </span>
+
+</mat-toolbar>
+<router-outlet></router-outlet>

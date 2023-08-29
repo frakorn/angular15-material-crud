@@ -1,0 +1,26 @@
+<mat-progress-bar mode="indeterminate" class="progress-bar" *ngIf="loading"></mat-progress-bar>
+<div class="login-component">
+    <mat-card>
+        <mat-card-title>HUB Login  <mat-icon>login</mat-icon></mat-card-title>
+        <mat-card-content>
+            <form [formGroup]="formGroup">
+                <div class="container">
+                    <mat-form-field>
+                        <input type="text" matInput placeholder="Email" formControlName="email">
+                    </mat-form-field>
+                </div>
+                <div class="container">
+                    <mat-form-field>
+                        <input type="password" matInput placeholder="Password" formControlName="password">
+                    </mat-form-field>
+                </div>
+                <div *ngIf="error" class="error">
+                    {{ errorMessage }}
+                </div>
+                <div class="button">
+                    <button type="submit" mat-button (click)="submit()">Login</button>
+                </div>
+            </form>
+        </mat-card-content>
+    </mat-card>
+</div>
