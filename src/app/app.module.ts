@@ -10,7 +10,8 @@ import {  } from './services/http.interceptor';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AuthInterceptor } from './services/http.interceptor';
-
+import { LoginService } from './login/services/login.service';
+import { ApiService } from './services/api.service';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,9 @@ import { AuthInterceptor } from './services/http.interceptor';
       provide: HTTP_INTERCEPTORS,
       useClass: AuthInterceptor,
       multi: true
-    }
+    },
+    LoginService,
+    ApiService
   ],
   bootstrap: [AppComponent],
 })
